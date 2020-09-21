@@ -1,2 +1,3 @@
-list-tutorial/bin/*
-list-tutorial/obj/*
+**/bin/
+**/obj/
+**/Training.csproj

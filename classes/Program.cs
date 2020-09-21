@@ -9,12 +9,12 @@ namespace classes
             var account = new BankAccount("Ben Nesbit", 42069);
             Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 
-/*
             account.MakeWithdrawal(500, DateTime.Now, "Rent Payment.");
             Console.WriteLine(account.Balance);
             account.MakeDeposit(100, DateTime.Now, "Friend paid me back.");
             Console.WriteLine(account.Balance);
-*/  
+            Console.WriteLine($"\n");
+
             // Test that the initial balance must be positive
             try
             {

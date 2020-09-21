@@ -5,7 +5,7 @@ namespace classes
     public class BankAccount
     {
         public string Number { get; }
-        public string Owner { set; set; }
+        public string Owner { get; set; }
         public decimal Balance { get; }
         public BankAccount(string name, decimal initialBalance)
         {

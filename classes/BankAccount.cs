@@ -12,7 +12,7 @@ namespace classes
             get
             {
                 decimal balance = 0;
-                foreach(var item in allTransactions)
+                foreach (var item in allTransactions)
                 {
                     balance += item.Amount;
                 }
@@ -39,7 +39,16 @@ namespace classes
         }
         public void MakeWithdrawal(decimal amount, DateTime date, string note)
         {
-
+            if (amount < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(amount), "Amount withdrawal must be positive.");
+            }
+            if (Balance - amount < 0)
+            {
+                throw new InvalidOperationException("No sufficient funds for this withdrawal.");
+            }
+            var withdrawal = new Transaction(-amount, date, note);
+            allTransactions.Add(withdrawal);
         }
     }
 }

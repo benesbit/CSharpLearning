@@ -13,6 +13,14 @@ namespace list_tutorial
 
         static void WorkingWithNumbers() {
             var fibonacciNumbers = new List<int> {1, 1};
+
+            var prev = fibonacciNumbers[fibonacciNumbers.Count - 1];
+            var prev2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+            fibonacciNumbers.Add(prev + prev2);
+
+            foreach(var item in fibonacciNumbers)
+                Console.WriteLine(item);
         }
 
         static void WorkingWithStrings()

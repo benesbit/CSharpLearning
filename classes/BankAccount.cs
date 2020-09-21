@@ -4,6 +4,7 @@ namespace classes
 {
     public class BankAccount
     {
+        private static int accountNumberSeed = 1234567890;
         public string Number { get; }
         public string Owner { get; set; }
         public decimal Balance { get; }

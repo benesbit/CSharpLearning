@@ -25,6 +25,17 @@ namespace classes
                 Console.WriteLine("Excpetion caught creating account with negative balance.");
                 Console.WriteLine(e.ToString());
             }
+
+            // Test for a negative balance
+            try
+            {
+                account.MakeWithdrawal(90000, DateTime.Now, "Attempt to overdraw account.");
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine("Exception caught trying to overdraw.");
+                Console.WriteLine(e.ToString());
+            }
         }
     }
 }

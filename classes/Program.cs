@@ -11,9 +11,7 @@ namespace classes
 
             // Test Withdrawl and Deposit
             account.MakeWithdrawal(500, DateTime.Now, "Rent Payment.");
-            // Console.WriteLine(account.Balance);
             account.MakeDeposit(100, DateTime.Now, "Friend paid me back.");
-            // Console.WriteLine(account.Balance);
             Console.WriteLine($"\n");
 
             Console.WriteLine(account.GetAccountHistory());

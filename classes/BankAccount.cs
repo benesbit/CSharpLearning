@@ -23,9 +23,11 @@ namespace classes
         public BankAccount(string name, decimal initialBalance)
         {
             this.Owner = name;
-            this.Balance = initialBalance;
+
             this.Number = accountNumberSeed.ToString();
             ++accountNumberSeed;
+
+            MakeDeposit(initialBalance, DateTime.Now, "Initial balance.");
         }
         private List<Transaction> allTransactions = new List<Transaction>();
         public void MakeDeposit(decimal amount, DateTime date, string note)

@@ -9,6 +9,8 @@ namespace classes
             var account = new BankAccount("Ben Nesbit", 42069);
             Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 
+/*
+            // Test Withdrawl and Deposit
             account.MakeWithdrawal(500, DateTime.Now, "Rent Payment.");
             Console.WriteLine(account.Balance);
             account.MakeDeposit(100, DateTime.Now, "Friend paid me back.");
@@ -36,6 +38,7 @@ namespace classes
                 Console.WriteLine("Exception caught trying to overdraw.");
                 Console.WriteLine(e.ToString());
             }
+*/            
         }
     }
 }

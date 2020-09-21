@@ -12,7 +12,7 @@ namespace list_tutorial
         }
 
         static void WorkingWithNumbers() {
-            Console.WriteLine("test\n");
+            var fibonacciNumbers = new List<int> {1, 1};
         }
 
         static void WorkingWithStrings()

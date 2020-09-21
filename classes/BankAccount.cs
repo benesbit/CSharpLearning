@@ -14,7 +14,7 @@ namespace classes
 
         public void MakeWithdrawal(decimal amount, DateTime date, string note)
         {
-            
+
         }
     }
 }

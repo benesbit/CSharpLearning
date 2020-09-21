@@ -14,7 +14,7 @@ namespace list_tutorial
         static void WorkingWithNumbers() {
             var fibonacciNumbers = new List<int> {1, 1};
 
-            for(int i = 2; i < 20; ++i)
+            while(fibonacciNumbers.Count < 20)
             {
                 var prev = fibonacciNumbers[fibonacciNumbers.Count - 1];
                 var prev2 = fibonacciNumbers[fibonacciNumbers.Count - 2];

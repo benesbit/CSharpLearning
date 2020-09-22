@@ -12,8 +12,12 @@ namespace rest_tutorial
         private static readonly HttpClient client = new HttpClient();
         static async Task Main(string[] args)
         {
-            await ProcessRepositories();
-            // Console.WriteLine("Hello World!");
+            var repositories = await ProcessRepositories();
+            
+            foreach (var repo in repositories)
+            {
+                Console.WriteLine(repo.Name);
+            }
         }
         private static async Task<List<Repository>> ProcessRepositories()
         {
@@ -29,12 +33,6 @@ namespace rest_tutorial
             var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 
             return repositories;
-
-            // var msg = await stringTask;
-            // foreach (var repo in repositories)
-            // {
-            //     Console.WriteLine(repo.Name);
-            // }
         }
     }
 }

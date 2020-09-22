@@ -17,6 +17,11 @@ namespace rest_tutorial
             foreach (var repo in repositories)
             {
                 Console.WriteLine(repo.Name);
+                Console.WriteLine($"\t{repo.Description}");
+                Console.WriteLine($"\t{repo.GitHubHomeUrl}");
+                Console.WriteLine($"\t{repo.Homepage}");
+                Console.WriteLine($"\t{repo.Watchers}");
+                Console.WriteLine();
             }
         }
         private static async Task<List<Repository>> ProcessRepositories()

@@ -19,5 +19,10 @@ namespace rest_tutorial
 
         [JsonPropertyName("watchers")]
         public int Watchers { get; set; }
+
+        [JsonPropertyName("pushed_at")]
+        public DateTime LastPushUtc { get; set; }
+
+        public DateTime LastPush => LastPushUtc.ToLocalTime();
     }
 }

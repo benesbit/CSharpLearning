@@ -31,7 +31,7 @@ namespace rest_tutorial
             // var msg = await stringTask;
             foreach (var repo in repositories)
             {
-                Console.Write(repo.name);
+                Console.WriteLine(repo.name);
             }
         }
     }

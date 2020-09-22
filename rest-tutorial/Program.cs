@@ -28,8 +28,11 @@ namespace rest_tutorial
             var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
             var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 
-            var msg = await stringTask;
-            Console.Write(msg);
+            // var msg = await stringTask;
+            foreach (var repo in repositories)
+            {
+                Console.Write(msg);
+            }
         }
     }
 }

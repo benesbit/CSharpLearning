@@ -27,8 +27,4 @@ namespace rest_tutorial
             Console.Write(msg);
         }
     }
-    public class Repository
-    {
-        public string name { get; set; }
-    }
 }

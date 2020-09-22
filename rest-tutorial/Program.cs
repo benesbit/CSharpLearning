@@ -21,6 +21,7 @@ namespace rest_tutorial
                 Console.WriteLine($"\t{repo.GitHubHomeUrl}");
                 Console.WriteLine($"\t{repo.Homepage}");
                 Console.WriteLine($"\t{repo.Watchers}");
+                Console.WriteLine($"\t{repo.LastPush}");
                 Console.WriteLine();
             }
         }

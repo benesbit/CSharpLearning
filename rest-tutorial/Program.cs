@@ -17,7 +17,7 @@ namespace rest_tutorial
             foreach (var repo in repositories)
             {
                 Console.WriteLine(repo.Name);
-                Console.WriteLine($"\tDescription: {(repo.Description == null ? "No Description Found".ToUpper() : repo.Description)}");
+                Console.WriteLine($"\tDescription: {(repo.Description == null ? "*No Description Found*".ToUpper() : repo.Description)}");
                 Console.WriteLine($"\tGitHub URL: {repo.GitHubHomeUrl}");
                 Console.WriteLine($"\tHomepage: {repo.Homepage}");
                 Console.WriteLine($"\tNumber of watchers: {repo.Watchers}");

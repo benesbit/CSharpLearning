@@ -23,7 +23,7 @@ namespace rest_tutorial
             );
             client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
-            var stringTask = client.GetStringAsync("https://api.github.com/orgs/dotnet/repos");
+            // var stringTask = client.GetStringAsync("https://api.github.com/orgs/dotnet/repos");
 
             var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
             var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);

@@ -5,9 +5,10 @@ namespace rest_tutorial
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            await ProcessRepositories();
+            // Console.WriteLine("Hello World!");
         }
         private static async Task ProcessRepositories()
         {
